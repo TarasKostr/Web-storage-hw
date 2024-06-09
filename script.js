@@ -19,7 +19,7 @@ function displayTasks() {
     taskList.innerHTML = ''
     tasks.forEach((task, index) => {
         const listItem = document.createElement('li');
-        listItem.innerHTML = '<input type="checkbox" onchange="updateTask(${input}, this.checked)" ${task.completed ? "checked" : ""}> ${task.task}'
+        listItem.innerHTML = `<input type="checkbox" onchange="updateTask(${index}, this.checked)" ${task.completed ? "checked" : ""}> ${task.task}`
         taskList.appendChild(listItem)
     });
 }
